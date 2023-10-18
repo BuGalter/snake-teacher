@@ -1,8 +1,20 @@
-# Название
+# snake-teacher
 
 Описание проекта
 
 ## Список основных технологий проекта
+
+### TypeScript
+
+### HTML
+
+### CSS
+
+### Webpack
+
+### ESLint
+
+### Prettier
 
 ## Структура проекта
 
@@ -28,13 +40,13 @@ $npm install
 
 In the project directory, you can run:
 
-### `npm start:dev`
+### `npm run serve`
 
 ### `npm run build`
 
 ## CHANGELOG HISTORY
 
-[CHANGELOG](https://github.com/REPOSITORY_NAME/PROJECT_NAME/blob/develop/CHANGELOG.md)
+[CHANGELOG](https://github.com/BuGalter/snake-teacher/blob/main/CHANGELOG.md)
 
 ### link to changelog
 
@@ -46,9 +58,9 @@ Name - _Valery Yakubchik_
 
 ## License
 
-Этот проект лицензируется в соответствии с лицензией Apache License 2.0 — подробности
+Этот проект лицензируется в соответствии с лицензией MIT — подробности
 см. в файле LICENSE.
 
 ## Copyright
 
-Copyright © 2022 [BuGalter](github).
+Copyright © 2023 [BuGalter](https://bugalter.vercel.app/).
