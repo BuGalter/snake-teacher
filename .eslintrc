@@ -1,0 +1,32 @@
+{
+  "env": {
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
+  "rules": {
+    "no-console": "off",
+    "indent": ["error", 2],
+    "import/extensions": "off", // Расширения файлов при импортах
+    "max-len": "warn", // Предупреждать о максимальной длине строки
+    "@typescript-eslint/ban-types": "warn", // Предупреждать о некоторых типах
+    "import/prefer-default-export": "off", // Отключает экспорт по умолчанию, если он один.
+    "no-param-reassign": "warn", // Предупреждение, если названия параметров функции переиспользовать в ней.
+    "@typescript-eslint/no-var-requires": "error", // Запрещает использовать require.
+    "no-return-await": "off", // Разрешить использовать return await, удобно для отладки.
+    "@typescript-eslint/no-non-null-assertion": "warn"
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    }
+  }
+}

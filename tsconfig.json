@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "rootDir": "src",
+    "outDir": "build",
+    "incremental": true, // определения наименее затратного способа проверки типов изменений.
+    "tsBuildInfoFile": "buildcache", // каталог для хранения .tsbuildinfo файлов.
+    "target": "ES6", // стандарт, хороший выбор.
+    "experimentalDecorators": true, // Подержка экспериментальных декараторов.
+    "emitDecoratorMetadata": true, // Экспериментальная поддержка выделения метаданных типа для декораторов.
+    "module": "commonjs", // Тип модулей.
+    "moduleResolution": "node", // Для реализации Node.js CommonJS.
+    "declaration": true, // Эти .d.ts файлы являются файлами определения типов.
+    "declarationDir": "build/types", // Место хранения.
+    "removeComments": true,
+    "strict": true, // Строгий режим, а дальше то что отключили
+    "strictNullChecks": false,
+    "strictBindCallApply": false,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true, // Можно import React from "react"; вместо  import * as React.
+    "esModuleInterop": true, // Помогает с импортами???
+    "forceConsistentCasingInFileNames": true, // Отследит регистрозависимые названия файлов
+    "noFallthroughCasesInSwitch": true, // Отслеживает в switch, что такой case есть.
+    "skipLibCheck": true, // Проверка только кода на который ссылается программа.
+    "allowJs": true // Разрешить импортировать файлы JavaScript в ваш проект, а не только файлы ts.
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules", "build", "buildcache"]
+}
