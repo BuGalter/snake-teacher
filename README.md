@@ -6,10 +6,6 @@
 
 ### TypeScript
 
-### HTML
-
-### CSS
-
 ### Webpack
 
 ### ESLint
@@ -47,8 +43,6 @@ In the project directory, you can run:
 ## CHANGELOG HISTORY
 
 [CHANGELOG](https://github.com/BuGalter/snake-teacher/blob/main/CHANGELOG.md)
-
-### link to changelog
 
 ## Authors
 
