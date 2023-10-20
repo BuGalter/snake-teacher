@@ -55,11 +55,11 @@ module.exports = {
       template: './src/index.html',
       inject: true
     }),
-    new CopyPlugin({
+    /* new CopyPlugin({
       patterns: [
         { from: 'src/assets/images/**', to: 'assets/images/[name][ext]' },
         { from: 'src/assets/spritesheets/**', to: 'assets/spritesheets/[name][ext]' }
       ]
-    })
+    }) */
   ]
 }
