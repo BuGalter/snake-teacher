@@ -1,8 +1,8 @@
-const path = require('path')
+const path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/app.ts',
@@ -11,24 +11,24 @@ module.exports = {
   devServer: {
     static: './dist',
     hot: true,
-    port: 8870
+    port: 8870,
   },
   module: {
     rules: [
       {
         test: /\.ts$/,
         use: 'ts-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: ['.ts', '.js'],
   },
   optimization: {
     splitChunks: {
@@ -37,29 +37,33 @@ module.exports = {
         commons: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
-          chunks: 'initial'
-        }
-      }
-    }
+          chunks: 'initial',
+        },
+      },
+    },
   },
   output: {
     filename: '[name].bundle.js',
     chunkFilename: '[name].chunk.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true
+    clean: true,
   },
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.html',
-      inject: true
+      inject: true,
     }),
-    /* new CopyPlugin({
+    new CopyPlugin({
       patterns: [
-        { from: 'src/assets/images/**', to: 'assets/images/[name][ext]' },
-        { from: 'src/assets/spritesheets/**', to: 'assets/spritesheets/[name][ext]' }
-      ]
-    }) */
-  ]
-}
+        //{ from: 'src/assets/images/**', to: 'assets/images/[name][ext]' },
+        { from: 'src/assets/**', to: 'assets/[name][ext]' },
+        /* {
+          from: 'src/assets/spritesheets/**',
+          to: 'assets/spritesheets/[name][ext]',
+        }, */
+      ],
+    }),
+  ],
+};
