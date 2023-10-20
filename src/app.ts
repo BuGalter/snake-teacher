@@ -1,13 +1,40 @@
-import './styles.css';
-import { getFullYear, getAppPrefix } from './utils';
+import * as Phaser from 'phaser';
 
-const main = () => {
-  window.addEventListener('load', () => {
-    let year = document.getElementById('year');
-    year.textContent = getFullYear().toString();
-    let appPrefix = document.getElementById('app-prefix');
-    appPrefix.textContent = getAppPrefix();
-  });
+const screenHeight = window.innerHeight;
+const screenWidth = window.innerWidth;
+
+export default class Demo extends Phaser.Scene {
+  constructor() {
+    super('demo');
+  }
+
+  preload() {
+    this.load.image('logo', 'assets/phaser3-logo.png');
+    this.load.image('libs', 'assets/libs.png');
+  }
+
+  create() {
+    this.add.image(screenWidth / 2, screenHeight / 2, 'libs');
+
+    const logo = this.add.image(screenWidth / 2, 70, 'logo');
+
+    this.tweens.add({
+      targets: logo,
+      y: 350,
+      duration: 1500,
+      ease: 'Sine.inOut',
+      yoyo: true,
+      repeat: -1,
+    });
+  }
+}
+
+const config = {
+  type: Phaser.AUTO,
+  backgroundColor: '#125555',
+  width: screenWidth,
+  height: screenHeight,
+  scene: Demo,
 };
 
-main();
+const game = new Phaser.Game(config);
