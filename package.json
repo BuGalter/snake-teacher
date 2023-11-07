@@ -11,7 +11,8 @@
   "keywords": [
     "JavaScript",
     "TypeScript",
-    "Snake game"
+    "Snake game",
+    "Phaser3"
   ],
   "author": "BuGalter <wardoc78@gmail.com>",
   "license": "MIT",
